@@ -1,0 +1,12 @@
+{
+  "name": "animated-menu",
+  "version": "1.0.0",
+  "description": "an animated menu using SASS and HTML for the Codepen challenge.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch public/styles/sass/style.scss -o public/styles/css"
+  },
+  "author": "elliempatten",
+  "license": "ISC"
+}

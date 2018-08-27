@@ -1,0 +1,112 @@
+$font-color: rgba(255, 255, 255, 0.384);
+$hover-color: rgba(255, 255, 255, 0.651);
+$background-2: #1722339d;
+$background: #90bdaf;
+$border-color: rgb(230, 110, 110);
+$transparent-border: rgba(230, 110, 110, 0.527);
+$font: 'Titillium Web', sans-serif;
+@import "partials/footer";
+
+body {
+    background:  $background;
+    font-family: $font;
+    margin-left: 0;
+    color: $font-color;
+    margin-top: 0;
+}
+
+.menu {
+    height: 100%;
+    padding-left: 0;
+    position: fixed;
+    width: 500px;
+}
+
+ol {
+    list-style: none;
+    counter-reset: item;
+ 
+  li {
+    counter-increment: item;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    color: $font-color;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $hover-color;
+    }
+    
+    &:before {
+        content: counter(item);
+        color: white;
+        text-align: center;
+    }
+        a {
+            display: inline-block;
+            color: inherit;
+            width: 100%;
+            text-decoration: inherit;
+            
+    }
+  }
+}
+  .main-menu {
+      padding-left: 0;
+      font-size: 30px;
+      background: $background-2;
+      width: 50px;
+      overflow: hidden;
+      transition: width 1.5s;
+      
+
+      .main {
+          border-left: solid 4px $border-color;
+          transition: border 0.8s;
+        &:before {
+            padding: 5px 30px 5px 15px;
+            
+        }
+        &:hover{
+        border-left: solid 20px $border-color;
+    }
+      }
+  
+
+  &:hover {
+    width: 240px;
+
+  }
+   
+}
+
+
+  .sub-menu {
+      font-size: 20px;
+      float: right;
+      position: relative;
+      margin-right: 20px;
+      height: 0;
+      transition: height 0.5s;
+
+      li { 
+          
+      &:before {
+          padding: 5px 10px 5px 10px;
+        }
+      }
+    }
+
+    footer {
+        position: fixed;
+        color: white;
+    }
+
+
+    
+
+    //need to add indication that the menu is a dropdown
+    // also need to add some kinda title/main body design/footer
+    // investigate flat flyout http://cssmenumaker.com/menu/flat-flyout-menu
